@@ -1,0 +1,16 @@
+name: ask-agent
+
+on:
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  ask:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Post request comment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api "repos/${{ github.repository }}/issues/1/comments" -f body='@zuihouye Please implement divide(a, b) with tests, as this issue asks.'
