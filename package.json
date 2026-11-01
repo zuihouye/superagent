@@ -1,0 +1,11 @@
+{
+  "name": "superagent-playground",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Tiny sandbox repository for exercising an autonomous coding agent",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node src/demo.js"
+  }
+}
